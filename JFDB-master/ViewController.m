@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //设置类和表关联(只需要设置一次即可,整个程序都能知道)
+    //设置类和表关联(只需要设置一次即可,整个程序都能知道,如果不设置,默认按照表名去查或者建表)
     [Tdata configForTableName:@"T_DATA_DICTIONARY"];
     //定义一个查询条件,没有给属性赋值,则表示查询全表
     Tdata *tdata = [[Tdata alloc] init];
