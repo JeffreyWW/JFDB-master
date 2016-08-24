@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0023A84F1D6D7EA6005FC9CB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0023A84E1D6D7EA6005FC9CB /* libsqlite3.tbd */; };
+		0023A8521D6DCE04005FC9CB /* HowToWorkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0023A8511D6DCE04005FC9CB /* HowToWorkController.m */; };
 		997B710ABF41B19DD2F48F0B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 997B74283C7CDABD5E4AA2C5 /* Info.plist */; };
 		997B722B2D31D4FADF10E609 /* JFTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7EDE821F512AFAF0E9B9 /* JFTable.m */; };
 		997B73C2B1A1E5DD043DA155 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997B753D6328A31D56B51D73 /* LaunchScreen.storyboard */; };
@@ -24,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		0023A84E1D6D7EA6005FC9CB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		0023A8501D6DCE04005FC9CB /* HowToWorkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToWorkController.h; sourceTree = "<group>"; };
+		0023A8511D6DCE04005FC9CB /* HowToWorkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowToWorkController.m; sourceTree = "<group>"; };
 		4ACC5558A2095186800F70CD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		997B70E130F9B406810615D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		997B73982D435C498F7270F2 /* defaultDataBase.db */ = {isa = PBXFileReference; lastKnownFileType = file.db; path = defaultDataBase.db; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 				997B7BF48F8B3C82D81DC8A7 /* Main.storyboard */,
 				997B7E4AA124E0FA2D0EC1C4 /* ViewController.h */,
 				997B7E616D5BF98EAA8B3DF7 /* ViewController.m */,
+				0023A8501D6DCE04005FC9CB /* HowToWorkController.h */,
+				0023A8511D6DCE04005FC9CB /* HowToWorkController.m */,
 				997B7BBF8AEE847EFB83D17F /* JFDB */,
 				997B7681963FC7571C213909 /* Models */,
 			);
@@ -272,6 +277,7 @@
 				997B7AC8244993490E060A78 /* AppDelegate.m in Sources */,
 				997B7B55910B63F91812CB91 /* ViewController.m in Sources */,
 				997B722B2D31D4FADF10E609 /* JFTable.m in Sources */,
+				0023A8521D6DCE04005FC9CB /* HowToWorkController.m in Sources */,
 				997B7882F97CF77729FEAF82 /* NSObject+dataBase.m in Sources */,
 				997B73DB74575D2C69EF6981 /* Tdata.m in Sources */,
 			);

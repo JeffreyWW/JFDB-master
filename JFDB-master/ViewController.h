@@ -8,6 +8,7 @@
 
 
 #import <UIKit/UIKit.h>
+#import "HowToWorkController.h"
 
 
 @interface ViewController : UIViewController
