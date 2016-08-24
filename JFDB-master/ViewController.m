@@ -31,6 +31,7 @@
     }];
     //定义一个查询条件,没有给属性赋值,则表示查询全表
     Tdata *tdata = [[Tdata alloc] init];
+    tdata.userMemo = @"2016.0.0.1";
     //查询数据
     NSArray *array = [tdata executQeueryWithProperties];
     // Do any additional setup after loading the view, typically from a nib.

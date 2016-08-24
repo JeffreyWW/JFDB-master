@@ -63,16 +63,18 @@ static const char *fieldsKey = "fieldKey";
     }
     return arrayProperties;
 }
-/**获取所有属性的键值对,包含多个数据*/
--(NSDictionary *)getPropertiesKeyValues {
+/**获取所有属性的键值对,包含多个数据,用来查询数据*/
+-(NSDictionary *)getFieldsValues {
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
     unsigned int count;
     objc_property_t *propertyList = class_copyPropertyList([self class], &count);
+    NSDictionary *propertiesFields = [[self class] propertiesFields];
     for (unsigned int i = 0; i < count; i++) {
         const char *propertyName = property_getName(propertyList[i]);
-        NSString *propertyKey = [NSString stringWithUTF8String:propertyName];
-        NSString *propertyValue = [self valueForKey:propertyKey];
-        dictionary[propertyKey] = propertyValue;
+        NSString *property = [NSString stringWithUTF8String:propertyName];//获取到属性
+        NSString *field = propertiesFields[property];//拿到对应表中的字段
+        NSString *fieldValue = [self valueForKey:property];//取这个属性的值
+        dictionary[field] = fieldValue;//设置字典,为表字段的值为模型的值
     }
     return dictionary;
 }
@@ -99,26 +101,26 @@ static const char *fieldsKey = "fieldKey";
 /**把实例里的属性当做一条数据加入到表中*/
 -(void)executeInsertDataWithProperies {
     JFTable *table = [[self class] createTableWithClassName];
-    NSDictionary *dataSource = [self getPropertiesKeyValues];
+    NSDictionary *dataSource = [self getFieldsValues];
     [table executeInsertDataWithDataSource:dataSource];
 }
 /**把这个实例从数据库中删除,重复的也会删除!*/
 -(void)executeDeleteDataWithProperties {
     JFTable *table = [[self class] createTableWithClassName];
-    NSDictionary *deleteParam = [self getPropertiesKeyValues];
+    NSDictionary *deleteParam = [self getFieldsValues];
     [table executeDeleteDataWithDeleteParam:deleteParam];
 }
 /**把模型在数据库中对应的数据更新*/
 -(void)executeUpdateDataWithProperties {
     JFTable *table = [[self class] createTableWithClassName];
-    NSDictionary *dataParam = [self getPropertiesKeyValues];
+    NSDictionary *dataParam = [self getFieldsValues];
     [table executeUpdateData:dataParam where:[self getPrimaryKeyValue]];
 }
 
 /**查询数据,返回数组*/
 -(NSArray *)executQeueryWithProperties {
     JFTable *table = [[self class] createTableWithClassName];
-    NSDictionary *queryParam = [self getPropertiesKeyValues];
+    NSDictionary *queryParam = [self getFieldsValues];
     NSArray *arrayDataSoruce = [table executQeueryDataWithQueryParam:queryParam];
     NSArray *fields = [[self class] getAllFields];
     /**里面是每一条数据*/
@@ -129,7 +131,6 @@ static const char *fieldsKey = "fieldKey";
         for (int i = 0; i < datasource.allKeys.count; i++) {
             //需要根据这个key变成模型里的属性key
             NSDictionary *fieldsProperties = [[self class] fieldsProperties];
-
             NSString *field = datasource.allKeys[(NSUInteger) i];
             NSString *property = fieldsProperties[field];
             NSString *value = datasource.allValues[(NSUInteger) i];
