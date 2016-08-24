@@ -6,8 +6,9 @@
 #import <Foundation/Foundation.h>
 #import "JFTable.h"
 @interface Tdata : NSObject
-@property(nonatomic, copy) NSString *ID;
-@property(nonatomic, copy) NSString *DKEY;
-@property(nonatomic, copy) NSString *MEMO;
-@property(nonatomic, copy) NSString *UPKEY;
+//数据库数据类型
+@property(nonatomic, copy) NSString *userID;
+@property(nonatomic, copy) NSString *key;
+@property(nonatomic, copy) NSString *userMemo;
+@property(nonatomic, copy) NSString *userUpKey;
 @end

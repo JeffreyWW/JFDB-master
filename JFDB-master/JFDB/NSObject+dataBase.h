@@ -6,13 +6,20 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (dataBase)
-//TODO 需要给一个方法,传入一个字典,键值对为属性名字和表字段名,设置好了以后,类的属性就会和表的字段对应上
 //TODO 需要给一个方法,传入一个字典,键值对为当前模型的数组属性名和对应的另外的一个类的类名.结果是在执行增删改查的时候,碰到这个属性,自动会按照那个模型去
 //查它对应的表,最终结果可以一查多
 
+//TODO 需要建立tableview控制器,设置增删改查的控件实现,让demo可视化
 
 /**设置表名字,默认以类名当表名,如果先调用这个方法设置表名,则会根据设置好的表名去对应查找*/
 +(void)configForTableName:(NSString *)tableName;
+
+/**
+ * 设置类的属性和表的字段关联,如果不设置,将按照类属性名和表字段一一对应
+ * @param config 传入的设置,伪代码: @{ 属性名1 : 表对应字段名字1, 属性名2 : 表对应字段名字2 }
+ */
++ (void)configForFields:(NSDictionary *)config;
+
 
 #pragma mark --- 增删该查,数据均存在以各自类名为表名的表中
 /**
