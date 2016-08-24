@@ -22,7 +22,7 @@
     [super viewDidLoad];
     //设置类和表关联(只需要设置一次即可,整个程序都能知道,如果不设置,默认按照表名去查或者建表)
     [Tdata configForTableName:@"T_DATA_DICTIONARY"];
-    //设置类属性和表字段对应
+    //设置类属性名和表字段对应,如不设置,默认去按照属性名去表中查相应字段
     [Tdata configForFields:@{
             @"userID" : @"ID",
             @"key" : @"DKEY",
