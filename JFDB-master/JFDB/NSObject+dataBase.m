@@ -54,9 +54,22 @@ static const char *fieldsSubClassKey = "fieldsSubClassKey";
 +(void)setFields:(NSDictionary *)config {
     objc_setAssociatedObject(self, fieldsKey, config, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-/**字典,键值对为属性:字段*/
+/**字典,键值对为属性:字段,如果之前没有设置过,则也返回字典,只是和表中的字段是一一对应的*/
 +(NSDictionary *)propertiesFields {
-    return objc_getAssociatedObject(self, fieldsKey);
+    NSDictionary *propertiesFields = objc_getAssociatedObject(self, fieldsKey);
+    unsigned int count;
+    if (!propertiesFields) {
+        NSMutableDictionary *m_propertiesFields = [NSMutableDictionary dictionary];
+        objc_property_t *propertyList = class_copyPropertyList([self class], &count);
+        for (unsigned int i = 0; i < count; i++) {
+            const char *propertyName = property_getName(propertyList[i]);//属性名
+            NSString *stringProperty = [NSString stringWithUTF8String:propertyName];
+            m_propertiesFields[stringProperty] = stringProperty;
+        }
+        return m_propertiesFields;
+    }
+
+    return propertiesFields;
 }
 /**字典,键值对为字段:属性*/
 +(NSDictionary *)fieldsProperties {
@@ -64,7 +77,9 @@ static const char *fieldsSubClassKey = "fieldsSubClassKey";
     NSMutableDictionary *fieldsProperties = [NSMutableDictionary dictionary];
     for (NSString *property in propertiesFields.allKeys) {
         NSString *field = propertiesFields[property];
-        fieldsProperties[field] = property;
+        if (field) {
+            fieldsProperties[field] = property;
+        }
     }
     return fieldsProperties;
 }
@@ -149,7 +164,14 @@ static const char *fieldsSubClassKey = "fieldsSubClassKey";
     };
     return primaryKeyValue;
 }
-
+/**获取到主键*/
++(NSString *)primaryKey {
+    unsigned int count;
+    objc_property_t *propertyList = class_copyPropertyList([self class], &count);
+    const char *primaryName = property_getName(propertyList[0]);
+    NSString *primaryKey = [NSString stringWithUTF8String:primaryName];
+    return primaryKey;
+}
 /**获取到这个类类名的表*/
 +(JFTable *)createTableWithClassName {
     NSArray *fields = [self getAllFields];
@@ -162,6 +184,12 @@ static const char *fieldsSubClassKey = "fieldsSubClassKey";
 +(void)dropTable {
     JFTable *table = [self createTableWithClassName];
     [table dropTable];
+    NSDictionary *propertySubClass = [self propertySubClass];
+    for (NSString *StrSubClass in propertySubClass.allValues) {
+        Class subClass = NSClassFromString(StrSubClass);
+        [subClass dropTable];
+    }
+
 }
 
 #pragma mark --- 增删改查
@@ -229,13 +257,26 @@ static const char *fieldsSubClassKey = "fieldsSubClassKey";
         /**遍历每一条数据的键值对,给模型赋值*/
         for (int i = 0; i < datasource.allKeys.count; i++) {
             //需要根据这个key变成模型里的属性key
-            NSDictionary *fieldsProperties = [[self class] fieldsProperties];
+            NSDictionary *fieldsProperties = [[model class] fieldsProperties];
             NSString *field = datasource.allKeys[(NSUInteger) i];
             NSString *property = fieldsProperties[field];
             NSString *value = datasource.allValues[(NSUInteger) i];
             [model setValue:value forKey:property];
         }
-        [arrayModels addObject:model];
+        /**把每条数据从自己的表中拿到了各个字符串属性并且赋值后,还需要对其数组进行查询并返回给其数组属性*/
+        NSDictionary *propertySubClass = [[self class] propertySubClass];
+        for (int i = 0; i < propertySubClass.allKeys.count; i++) {
+            NSString *property = propertySubClass.allKeys[(NSUInteger) i];//数组属性名
+            NSString *strSubClass = propertySubClass.allValues[(NSUInteger) i];//数组里面模型类名
+            Class subClass = NSClassFromString(strSubClass);//数组里面模型的类
+            id subModel = [[subClass alloc] init];//声明一个次级模型,当做查询条件
+            NSString *primaryKey = [[self class] primaryKey];//拿到当前模型(父级)主键
+            NSString *valueForPrimaryKey = [self valueForKey:primaryKey];//拿到主键的值
+            [subModel setValue:valueForPrimaryKey forKey:primaryKey];//之前定义好的,次级模型有一个属性,为上一级的主键
+            NSArray *arraySubModels = [subModel executQeueryWithProperties];//次级模型去查它的表,按照字段为父级模型主键且值相同的去查,表示,属于这个上级模型的所有次级模型
+            [model setValue:arraySubModels forKey:property];//把这个模型数组给数组属性赋值
+        }
+            [arrayModels addObject:model];//这里是外面的查询,把父级查好的自己的字符串字段和数组处理好以后,添加到最后要返回的数组里去
     }
     return arrayModels;
 }

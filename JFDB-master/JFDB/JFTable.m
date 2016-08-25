@@ -78,9 +78,9 @@
         NSString *sql_dropTable = [NSString stringWithFormat:@"DROP TABLE IF EXISTS %@;", self.name];
         BOOL result = [self.database executeUpdate:sql_dropTable];
         if (result) {
-            NSLog(@"删除成功");
+            NSLog(@"%@删除成功",self.name);
         } else {
-            NSLog(@"删除失败");
+            NSLog(@"%@删除失败",self.name);
         }
         [self.database close];
     } else {
@@ -107,9 +107,9 @@
         NSArray *values = dataSource.allValues;
         BOOL result = [self.database executeUpdate:sql withArgumentsInArray:values];
         if (result) {
-            NSLog(@"插入数据成功");
+            NSLog(@"%@插入数据成功",self.name);
         } else {
-            NSLog(@"插入数据失败");
+            NSLog(@"%@插入数据失败",self.name);
         }
         [self.database close];
     } else {
@@ -131,9 +131,9 @@
             NSString *sql = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %@", self.name, stringFields];
             BOOL result = [self.database executeUpdate:sql withArgumentsInArray:deleteParam.allValues];
             if (result) {
-                NSLog(@"删除数据成功");
+                NSLog(@"%@删除数据成功",self.name);
             } else {
-                NSLog(@"删除数据失败");
+                NSLog(@"%@删除数据失败",self.name);
             }
         }
         [self.database close];
@@ -154,9 +154,9 @@
 //        BOOL result = [self.database executeUpdate:sql,@"Lucy",@"American",@"0"];
         BOOL result = [self.database executeUpdate:sql withArgumentsInArray:arrayValues];
         if (result) {
-            NSLog(@"修改数据成功");
+            NSLog(@"%@修改数据成功",self.name);
         } else {
-            NSLog(@"修改数据失败");
+            NSLog(@"%@修改数据失败",self.name);
         }
     } else {
         NSLog(@"数据库打开失败");

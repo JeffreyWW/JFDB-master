@@ -25,7 +25,7 @@
 
 + (NSDictionary *)propertySubClass;
 
-/**删除表*/
+/**删除表,如果本类有数组属性,且有关联表,则会删除关联的子级表*/
 + (void)dropTable;
 
 #pragma mark --- 增删该查,数据均存在以各自类名为表名的表中

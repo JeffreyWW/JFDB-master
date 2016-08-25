@@ -31,6 +31,9 @@
             @"sex": @"SEX",
             @"name": @"NAME"
     }];
+    [Person configForArraySubClass:@{
+            @"products" : @"Product"
+    }];
     // Override point for customization after application launch.
     return YES;
 }
