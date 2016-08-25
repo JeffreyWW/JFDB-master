@@ -15,10 +15,12 @@
       <sourceFolder url="file://$MODULE_DIR$/JFDB-master/JFDB/JFTable.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JFDB-master/JFDB/JFDB.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JFDB-master/ViewController.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Models/Tdata.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Models/Tdata.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Models/Person.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Models/Person.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Models/Product.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Models/Tdata.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Models/Person.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Models/Tdata.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Models/Product.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JFDB-master/main.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Assets.xcassets" isTestSource="false" />

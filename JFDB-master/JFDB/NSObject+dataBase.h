@@ -20,6 +20,11 @@
  */
 + (void)configForFields:(NSDictionary *)config;
 
+
++ (void)configForArraySubClass:(NSDictionary *)config;
+
++ (NSDictionary *)propertySubClass;
+
 /**删除表*/
 + (void)dropTable;
 

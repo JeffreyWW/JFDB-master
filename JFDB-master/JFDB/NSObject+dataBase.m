@@ -12,6 +12,7 @@
 #import "NSObject+dataBase.h"
 static const char *tableNameKey = "tableNameKey";
 static const char *fieldsKey = "fieldKey";
+static const char *fieldsSubClassKey = "fieldsSubClassKey";
 
 
 @implementation NSObject (dataBase)
@@ -29,16 +30,35 @@ static const char *fieldsKey = "fieldKey";
     NSString *tableName = name ? name : NSStringFromClass([self class]);
     return tableName;
 }
-
+/**设置字段对应*/
 +(void)configForFields:(NSDictionary *)config {
     [self setFields:config];
 }
+
+/**设置数组属性和对应的类名*/
+//设置好了以后,添加数据的时候,在设置字段的时候,之前是没有设置这个字段的,现在赋值给单独是一个属性数组,存放数组属性的字段名.然后根据
+//设置好以后可以直接返回的字段,拿到对应的类,通过这个类直接去查符合这个模型主键的所有的数据并且赋值给这个模型的这个字段
++(void)configForArraySubClass:(NSDictionary *)config {
+    [self setFieldsSubClass:config];
+}
+
++(void)setFieldsSubClass:(NSDictionary *)config {
+    objc_setAssociatedObject(self, fieldsSubClassKey, config, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
++(NSDictionary *)propertySubClass {
+    NSDictionary *fieldsSubClass = objc_getAssociatedObject(self, fieldsSubClassKey);
+    return fieldsSubClass;
+}
+
 +(void)setFields:(NSDictionary *)config {
     objc_setAssociatedObject(self, fieldsKey, config, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
+/**字典,键值对为属性:字段*/
 +(NSDictionary *)propertiesFields {
     return objc_getAssociatedObject(self, fieldsKey);
 }
+/**字典,键值对为字段:属性*/
 +(NSDictionary *)fieldsProperties {
     NSDictionary *propertiesFields = [self propertiesFields];
     NSMutableDictionary *fieldsProperties = [NSMutableDictionary dictionary];
@@ -71,19 +91,50 @@ static const char *fieldsKey = "fieldKey";
     }
     return arrayProperties;
 }
-/**获取所有属性的键值对,包含多个数据,用来查询数据*/
+/**获取所有属性的键值对,包含多个数据,用来查询数据,需要把数组属性去除掉*/
 -(NSDictionary *)getFieldsValues {
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
     unsigned int count;
     objc_property_t *propertyList = class_copyPropertyList([self class], &count);
     NSDictionary *propertiesFields = [[self class] propertiesFields];
     for (unsigned int i = 0; i < count; i++) {
-        const char *propertyName = property_getName(propertyList[i]);
-        NSString *property = [NSString stringWithUTF8String:propertyName];//获取到属性
-        NSString *field = propertiesFields[property] ? propertiesFields[property] : property;//拿到对应表中的字段,如果为空,就直接还是用属性名
-        NSString *fieldValue = [self valueForKey:property];//取这个属性的值
-        dictionary[field] = fieldValue;//设置字典,为表字段的值为模型的值
+//        const char *propertyName = property_getName(propertyList[i]);
+//        NSString *property = [NSString stringWithUTF8String:propertyName];//获取到属性
+//        NSString *field = propertiesFields[property] ? propertiesFields[property] : property;//拿到对应表中的字段,如果为空,就直接还是用属性名
+//        NSString *fieldValue = [self valueForKey:property];//取这个属性的值
+//        dictionary[field] = fieldValue;//设置字典,为表字段的值为模型的值
+
+        const char *propertyName = property_getName(propertyList[i]);//属性名
+        NSString *property = [NSString stringWithUTF8String:propertyName];//属性名字符串
+        const char *type = property_getAttributes(propertyList[i]);//属性的类型名
+        NSString *stringType = [NSString stringWithUTF8String:type];//类型名字符串,但是会有点不同
+        NSString *typeClassName = [stringType componentsSeparatedByString:@"\""][1];//最终的类型名字符串
+
+        if ([typeClassName isEqualToString:@"NSString"]) {
+            NSString *field = propertiesFields[property] ? propertiesFields[property] : property;//拿到对应表中的字段,如果为空,就直接还是用属性名
+            NSString *fieldValue = [self valueForKey:property];//取这个属性的值
+            dictionary[field] = fieldValue;//设置字典,为表字段的值为模型的值
+        } else {
+            //TODO 这里是属性名不是字符串的判断逻辑
+        }
     }
+
+//    for (unsigned int i = 0; i < count; i++) {
+//        const char *propertyName = property_getName(propertyList[i]);
+//        const char *type = property_getAttributes(propertyList[i]);
+//        NSString *stringType = [NSString stringWithUTF8String:type];
+//        NSString *stringProperty = [NSString stringWithUTF8String:propertyName];
+//        NSString *typeClassName = [stringType componentsSeparatedByString:@"\""][1];
+//        NSString *field=nil;
+//        if ([typeClassName isEqualToString:@"NSString"]) {
+//            field = fields[stringProperty] ? fields[stringProperty] : stringProperty;
+//            [arrayProperties addObject:field];
+//        } else if ([typeClassName isEqualToString:@"NSArray"]||[typeClassName isEqualToString:@"NSMutableArray"]){
+//            //TODO 这里是数组属性的逻辑
+//        }
+//    }
+
+
     return dictionary;
 }
 /**获取主键的键值对,所以仅有一个数据*/
@@ -119,6 +170,30 @@ static const char *fieldsKey = "fieldKey";
     JFTable *table = [[self class] createTableWithClassName];
     NSDictionary *dataSource = [self getFieldsValues];
     [table executeInsertDataWithDataSource:dataSource];
+    NSDictionary *primaryKeyValue = [self getPrimaryKeyValue];//主键,主要用来查找次级数据数组
+    NSString *primary = primaryKeyValue.allKeys.firstObject;//主键
+    NSString *primartValue = primaryKeyValue.allValues.firstObject;//主键的值,用来去子表中查数组
+
+    NSDictionary *propertySubClass = [[self class] propertySubClass];//字典,存的是属性名和关联的类名的键值对
+    if (propertySubClass.allKeys.count > 0 && primaryKeyValue) {
+        for (int i = 0; i < propertySubClass.allKeys.count; i++) {
+            NSString *property = propertySubClass.allKeys[(NSUInteger) i];//每一个数组属性的属性名
+            NSString *className = propertySubClass.allValues[(NSUInteger) i];//每一个数组属性对应的类名
+            NSArray *subModels = [self valueForKey:property];
+            if (subModels.count > 0) {
+                for (id subModel in subModels) {
+                    [subModel executeInsertDataWithProperies];
+                }
+
+            }
+        }
+
+
+
+
+    }
+
+
 }
 /**把这个实例从数据库中删除,重复的也会删除!*/
 -(void)executeDeleteDataWithProperties {
@@ -137,6 +212,7 @@ static const char *fieldsKey = "fieldKey";
     JFTable *table = [[self class] createTableWithClassName];
     NSDictionary *dataFromTable = [tableModel getFieldsValues];
     NSDictionary *dataFromModel = [self getFieldsValues];
+
     [table executeUpdateData:dataFromModel where:dataFromTable];
 }
 

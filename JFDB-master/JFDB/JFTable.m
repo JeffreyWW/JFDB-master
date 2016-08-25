@@ -196,15 +196,16 @@
 }
 
 #pragma mark --- 一些sql语句转换
-
+//TODO 这里主键的增加需要判断逻辑,默认应该不需要增加主键,但是需要主键的字段描述
 /**转换字段数组为sql语句,最终的形式类似(TEXT PRIMARY KEY , name text , phoneNum text);*/
 + (NSString *)transforFieldsToSql_createTable:(NSArray *)fields {
     NSMutableString *stringSql = [[NSMutableString alloc] initWithString:@"("];
     for (int i = 1; i <= fields.count; i++) {
         /**获取字段字符串*/
         NSString *field = fields[(NSUInteger) (i - 1)];
-        /**如果是第一个字段,设置为主键,类型则都设置为TEXT类型*/
-        NSString *type = i == 1 ? @"TEXT PRIMARY KEY" : @"TEXT";
+        /**如果是第一个字段,且主键是否有的属性设置为YES,才会设置为主键,类型则都设置为TEXT类型*/
+//        NSString *type = i == 1 ? @"TEXT PRIMARY KEY" : @"TEXT";
+        NSString *type = @"TEXT";
         /**中间添加则为",",否则最后一个结尾的时候为");" */
         NSString *punctuation = i == fields.count ? @");" : @",";
         /**拼接sql语句,最终的形式类似(TEXT PRIMARY KEY , name text , phoneNum text); */
