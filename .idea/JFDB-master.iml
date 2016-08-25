@@ -6,8 +6,8 @@
     </content>
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Podfile" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Assets.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JFDB-master/HowToWorkController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/HowToWorkController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JFDB-master/AppDelegate.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JFDB-master/JFDB/NSObject+dataBase.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JFDB-master/JFDB/NSObject+dataBase.m" isTestSource="false" />
@@ -17,13 +17,18 @@
       <sourceFolder url="file://$MODULE_DIR$/JFDB-master/ViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Models/Tdata.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Models/Tdata.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/AppDelegate.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Models/Person.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Models/Person.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JFDB-master/main.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Assets.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JFDB-master/ViewController.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/HowToWorkController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/AppDelegate.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Base.lproj/Main.storyboard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Class/MainController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JFDB-master/Class/MainController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dataSource/name.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dataSource/defaultDataBase.db" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SQLCipher/SQLCipher.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SQLCipher/SQLCipher-dummy.m" isTestSource="false" />
@@ -31,20 +36,20 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/FMDB/FMDB-prefix.pch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/FMDB/FMDB-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/FMDB/FMDB.xcconfig" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.markdown" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-frameworks.sh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods.debug.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods.release.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-dummy.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.markdown" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-resources.sh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDatabaseAdditions.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDB.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMResultSet.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDatabase.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMResultSet.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDatabaseAdditions.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDatabasePool.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDatabaseQueue.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDatabasePool.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDB.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMResultSet.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDatabase.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDatabasePool.h" isTestSource="false" />

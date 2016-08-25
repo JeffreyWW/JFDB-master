@@ -4,10 +4,11 @@
 //
 //  Created by Jeffrey on 16/8/24.
 //  Copyright (c) 2016 Jeffrey. All rights reserved.
-//
+//主界面:展现数据,选择项:,左边按照属性名名,右边按照更改后的字段名
 
 
 #import "AppDelegate.h"
+#import "Person.h"
 
 
 @interface AppDelegate ()
@@ -18,9 +19,18 @@
 
 
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    /**从项目中把数据库存到沙盒*/
     [self saveDBIntoDocument];
+    [Person configForTableName:@"personTable"];
+    [Person configForFields:@{
+            @"userID": @"ID",
+            @"height": @"HEIGHT",
+            @"weight": @"WEIGHT",
+            @"age": @"AGE",
+            @"sex": @"SEX",
+            @"name": @"NAME"
+    }];
     // Override point for customization after application launch.
     return YES;
 }

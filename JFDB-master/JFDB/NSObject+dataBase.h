@@ -20,6 +20,8 @@
  */
 + (void)configForFields:(NSDictionary *)config;
 
+/**删除表*/
++ (void)dropTable;
 
 #pragma mark --- 增删该查,数据均存在以各自类名为表名的表中
 /**
@@ -36,11 +38,13 @@
 
 /**
  * 改
- * 主键没有改变的情况下,更新数据到数据库中
+ * 方法1:主键没有改变的情况下,更新数据到数据库中
  * 数据变更以后调用这个方法,把更改过属性后的数据进行重新修改,内部是通过主键查询后进行修改,所以如果主键属性
  * 要变动的话,处理的时候应该在没有改变属性的情况下调用删除,然后改完属性后调用增加数据
+ * 方法2:直接根据tableModel查到需要更改的数据,然后根据当前模型把查到的数据全部替换掉
  */
 - (void)executeUpdateDataWithProperties;
+- (void)executeUpdateDataWithPropertiesFromTableModel:(id)tableModel;
 
 /**
  * 查

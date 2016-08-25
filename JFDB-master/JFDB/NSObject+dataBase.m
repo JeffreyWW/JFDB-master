@@ -56,10 +56,18 @@ static const char *fieldsKey = "fieldKey";
     objc_property_t *propertyList = class_copyPropertyList([self class], &count);
     NSDictionary *fields = [self propertiesFields];
     for (unsigned int i = 0; i < count; i++) {
-        const char *propertyNmae = property_getName(propertyList[i]);
-        NSString *stringProperty = [NSString stringWithUTF8String:propertyNmae];
-        NSString *field = fields[stringProperty] ? fields[stringProperty] : stringProperty;
-        [arrayProperties addObject:field];
+        const char *propertyName = property_getName(propertyList[i]);
+        const char *type = property_getAttributes(propertyList[i]);
+        NSString *stringType = [NSString stringWithUTF8String:type];
+        NSString *stringProperty = [NSString stringWithUTF8String:propertyName];
+        NSString *typeClassName = [stringType componentsSeparatedByString:@"\""][1];
+        NSString *field=nil;
+        if ([typeClassName isEqualToString:@"NSString"]) {
+            field = fields[stringProperty] ? fields[stringProperty] : stringProperty;
+            [arrayProperties addObject:field];
+        } else if ([typeClassName isEqualToString:@"NSArray"]||[typeClassName isEqualToString:@"NSMutableArray"]){
+            //TODO 这里是数组属性的逻辑
+        }
     }
     return arrayProperties;
 }
@@ -72,7 +80,7 @@ static const char *fieldsKey = "fieldKey";
     for (unsigned int i = 0; i < count; i++) {
         const char *propertyName = property_getName(propertyList[i]);
         NSString *property = [NSString stringWithUTF8String:propertyName];//获取到属性
-        NSString *field = propertiesFields[property];//拿到对应表中的字段
+        NSString *field = propertiesFields[property] ? propertiesFields[property] : property;//拿到对应表中的字段,如果为空,就直接还是用属性名
         NSString *fieldValue = [self valueForKey:property];//取这个属性的值
         dictionary[field] = fieldValue;//设置字典,为表字段的值为模型的值
     }
@@ -93,11 +101,19 @@ static const char *fieldsKey = "fieldKey";
 
 /**获取到这个类类名的表*/
 +(JFTable *)createTableWithClassName {
-    NSArray *properties = [self getAllFields];
+    NSArray *fields = [self getAllFields];
     NSString *tableName = [self tableName];
-    JFTable *table = [JFTable tableWithName:tableName fields:properties];
+    JFTable *table = [JFTable tableWithName:tableName fields:fields];
     return table;
 }
+
+/**删除表*/
++(void)dropTable {
+    JFTable *table = [self createTableWithClassName];
+    [table dropTable];
+}
+
+#pragma mark --- 增删改查
 /**把实例里的属性当做一条数据加入到表中*/
 -(void)executeInsertDataWithProperies {
     JFTable *table = [[self class] createTableWithClassName];
@@ -115,6 +131,13 @@ static const char *fieldsKey = "fieldKey";
     JFTable *table = [[self class] createTableWithClassName];
     NSDictionary *dataParam = [self getFieldsValues];
     [table executeUpdateData:dataParam where:[self getPrimaryKeyValue]];
+}
+/**同上,但是可以指定一个模型参数*/
+-(void)executeUpdateDataWithPropertiesFromTableModel:(id)tableModel {
+    JFTable *table = [[self class] createTableWithClassName];
+    NSDictionary *dataFromTable = [tableModel getFieldsValues];
+    NSDictionary *dataFromModel = [self getFieldsValues];
+    [table executeUpdateData:dataFromModel where:dataFromTable];
 }
 
 /**查询数据,返回数组*/

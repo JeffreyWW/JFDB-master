@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		0023A84F1D6D7EA6005FC9CB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0023A84E1D6D7EA6005FC9CB /* libsqlite3.tbd */; };
 		0023A8521D6DCE04005FC9CB /* HowToWorkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0023A8511D6DCE04005FC9CB /* HowToWorkController.m */; };
+		00E30D701D6E8C1D00EF83BA /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E30D6F1D6E8C1D00EF83BA /* MainController.m */; };
 		997B710ABF41B19DD2F48F0B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 997B74283C7CDABD5E4AA2C5 /* Info.plist */; };
+		997B71C8F4F5FE77762881EB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7BBF0676BD2F36B899AE /* Person.m */; };
 		997B722B2D31D4FADF10E609 /* JFTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7EDE821F512AFAF0E9B9 /* JFTable.m */; };
 		997B73C2B1A1E5DD043DA155 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997B753D6328A31D56B51D73 /* LaunchScreen.storyboard */; };
 		997B73DB74575D2C69EF6981 /* Tdata.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7F636846C6C7F51D83D6 /* Tdata.m */; };
 		997B74922F67119085A0C005 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997B7BF48F8B3C82D81DC8A7 /* Main.storyboard */; };
 		997B77EF08E77C484148723E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997B73E0D7152ACE6A1583A4 /* Assets.xcassets */; };
+		997B787EA5F8B01B95BE5DC5 /* name.txt in Resources */ = {isa = PBXBuildFile; fileRef = 997B7E1B7DC6E8A2282B0313 /* name.txt */; };
 		997B7882F97CF77729FEAF82 /* NSObject+dataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7C4592B7767F0A589E4E /* NSObject+dataBase.m */; };
 		997B79221C9081FCBFE403E2 /* defaultDataBase.db in Resources */ = {isa = PBXBuildFile; fileRef = 997B73982D435C498F7270F2 /* defaultDataBase.db */; };
 		997B7AC8244993490E060A78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B75F90C490EDFC048D00F /* AppDelegate.m */; };
@@ -27,6 +30,8 @@
 		0023A84E1D6D7EA6005FC9CB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		0023A8501D6DCE04005FC9CB /* HowToWorkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToWorkController.h; sourceTree = "<group>"; };
 		0023A8511D6DCE04005FC9CB /* HowToWorkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowToWorkController.m; sourceTree = "<group>"; };
+		00E30D6E1D6E8C1D00EF83BA /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		00E30D6F1D6E8C1D00EF83BA /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		4ACC5558A2095186800F70CD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		997B70E130F9B406810615D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		997B73982D435C498F7270F2 /* defaultDataBase.db */ = {isa = PBXFileReference; lastKnownFileType = file.db; path = defaultDataBase.db; sourceTree = "<group>"; };
@@ -38,8 +43,11 @@
 		997B7735F16C169B2DF69F00 /* JFDB-master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JFDB-master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		997B773EC1E2107D7E49F6B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		997B7A34BAE0B60C9F81A21A /* Tdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tdata.h; sourceTree = "<group>"; };
+		997B7A5ACE56591DE43DBD63 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		997B7BBF0676BD2F36B899AE /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		997B7C4592B7767F0A589E4E /* NSObject+dataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+dataBase.m"; sourceTree = "<group>"; };
 		997B7DD00FE5F0F07409CD3B /* JFTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFTable.h; sourceTree = "<group>"; };
+		997B7E1B7DC6E8A2282B0313 /* name.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = name.txt; sourceTree = "<group>"; };
 		997B7E4AA124E0FA2D0EC1C4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		997B7E616D5BF98EAA8B3DF7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		997B7E747469C44BB3B8C86C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,6 +89,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		997B736020C37E3639866758 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				00E30D6E1D6E8C1D00EF83BA /* MainController.h */,
+				00E30D6F1D6E8C1D00EF83BA /* MainController.m */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
 		997B75DA9DBBD5FCB548F271 /* JFDB-master */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +114,7 @@
 				0023A8511D6DCE04005FC9CB /* HowToWorkController.m */,
 				997B7BBF8AEE847EFB83D17F /* JFDB */,
 				997B7681963FC7571C213909 /* Models */,
+				997B736020C37E3639866758 /* Class */,
 			);
 			path = "JFDB-master";
 			sourceTree = "<group>";
@@ -106,6 +124,8 @@
 			children = (
 				997B7F636846C6C7F51D83D6 /* Tdata.m */,
 				997B7A34BAE0B60C9F81A21A /* Tdata.h */,
+				997B7BBF0676BD2F36B899AE /* Person.m */,
+				997B7A5ACE56591DE43DBD63 /* Person.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				997B73982D435C498F7270F2 /* defaultDataBase.db */,
+				997B7E1B7DC6E8A2282B0313 /* name.txt */,
 			);
 			path = dataSource;
 			sourceTree = "<group>";
@@ -215,6 +236,7 @@
 				997B73C2B1A1E5DD043DA155 /* LaunchScreen.storyboard in Resources */,
 				997B74922F67119085A0C005 /* Main.storyboard in Resources */,
 				997B79221C9081FCBFE403E2 /* defaultDataBase.db in Resources */,
+				997B787EA5F8B01B95BE5DC5 /* name.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,12 +296,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				997B7D2AA62896AEE5266A1B /* main.m in Sources */,
+				00E30D701D6E8C1D00EF83BA /* MainController.m in Sources */,
 				997B7AC8244993490E060A78 /* AppDelegate.m in Sources */,
 				997B7B55910B63F91812CB91 /* ViewController.m in Sources */,
 				997B722B2D31D4FADF10E609 /* JFTable.m in Sources */,
 				0023A8521D6DCE04005FC9CB /* HowToWorkController.m in Sources */,
 				997B7882F97CF77729FEAF82 /* NSObject+dataBase.m in Sources */,
 				997B73DB74575D2C69EF6981 /* Tdata.m in Sources */,
+				997B71C8F4F5FE77762881EB /* Person.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
