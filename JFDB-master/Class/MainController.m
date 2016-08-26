@@ -5,6 +5,17 @@
 //  Created by Jeffrey on 16/8/25.
 //  Copyright © 2016年 Jeffrey. All rights reserved.
 //
+//TODO 主界面还需要设置增删改查的4个按钮,对应4个页面.
+/**
+ * 增:弹出一个tableview,对应每个字段,并且能选择对应的数据值,product则进入到另外一个相同的界面,只是没有数组属性,添加完成会返回到当前模型这里,继续添加常规属性
+ * 最后总体有个确认,添加完成返回到主界面刷新,添加过程中需要先拿到之前的表对比主键问题
+ * 删:直接在当前界面做,因为常规来说,主键唯一,所以这里删除对应删除掉数据库中的这个模型即可,完成后刷新界面
+ * 改:同上,只是为编辑按钮,每个字段都可以修改
+ * 查:和增类似,最后返回刷新
+ *
+ *
+ *
+ */
 
 #import "MainController.h"
 #import "Person.h"
@@ -43,7 +54,7 @@
 
 /**点击重置并随机生成指定条数数据,现在为10条*/
 - (IBAction)clickBtRestData:(UIButton *)sender {
-    [Person reCreatRandomTableWithContentNumber:3];
+    [Person reCreatRandomTableWithContentNumber:5];
     Person *person = [[Person alloc] init];
     self.arrayPerson = [person executQeueryWithProperties];
     [self.tableView reloadData];
@@ -77,8 +88,17 @@
     cell.lbName.text = person.name;
     return cell;
 }
-
-
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSString *stringCount = [NSString stringWithFormat:@"总计%d条数据", self.arrayPerson.count];
+    return stringCount;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Person *person = self.arrayPerson[(NSUInteger) indexPath.row];
+    NSLog(@"次级product数据有%d条", person.products.count);
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 40;
+}
 /*
 #pragma mark - Navigation
 

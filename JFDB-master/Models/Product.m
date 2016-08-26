@@ -15,18 +15,34 @@
 /**生成Person类的随机数据,姓名根据本地的txt文件来生成,个数自定义*/
 + (NSArray *)reCreatRandomTableWithUserID:(NSString *)userID {
 //    [Product dropTable];
+//    NSMutableArray *arrayFinal = [NSMutableArray array];
+//    NSString *name = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"nameProduct" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
+//    NSArray *names = [name componentsSeparatedByString:@"、"];
+//    NSUInteger contentNumber = arc4random() % 11;;//获取1到10之间的随机数当做数组个数
+//    NSArray *namesFinal = [names randomWithNumber:contentNumber];
+//    for (int i = 1; i <= namesFinal.count; i++) {
+//        Product *product = [[Product alloc] initWithRandomData];
+//        product.name = namesFinal[(NSUInteger) (i - 1)];
+//        product.productID = [NSString stringWithFormat:@"%d", i];
+//        product.userID = userID;
+//        [arrayFinal addObject:product];
+//        [product executeInsertDataWithProperies];
+//    }
     NSMutableArray *arrayFinal = [NSMutableArray array];
-    NSString *name = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"nameProduct" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
-    NSArray *names = [name componentsSeparatedByString:@"、"];
+    NSString *stringUserIDsNames = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"nameProduct" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
+    NSArray *userIDsNames = [stringUserIDsNames componentsSeparatedByString:@"、"];
     NSUInteger contentNumber = arc4random() % 11;;//获取1到10之间的随机数当做数组个数
-    NSArray *namesFinal = [names randomWithNumber:contentNumber];
-    for (int i = 1; i <= namesFinal.count; i++) {
+    NSArray *userIDNamesFinal = [userIDsNames randomWithNumber:contentNumber];
+    for (int i = 1; i <= userIDNamesFinal.count; i++) {
         Product *product = [[Product alloc] initWithRandomData];
-        product.name = namesFinal[(NSUInteger) (i - 1)];
-        product.productID = [NSString stringWithFormat:@"%d", i];
+        NSString *userIDName = userIDNamesFinal[(NSUInteger) (i - 1)];
+        NSArray *arrayUserIDName = [userIDName componentsSeparatedByString:@":"];
+        product.productID = arrayUserIDName.firstObject;
+        product.name = arrayUserIDName.lastObject;
         product.userID = userID;
+//        [product executeInsertDataWithProperies];
         [arrayFinal addObject:product];
-        [product executeInsertDataWithProperies];
+
     }
     return arrayFinal;
 }

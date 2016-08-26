@@ -26,17 +26,31 @@
     [Person dropTable];
     [Product dropTable];
     NSMutableArray *arrayFinal = [NSMutableArray array];
-    NSString *name = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"namePerson" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
-    NSArray *names = [name componentsSeparatedByString:@"、"];
-    NSArray *namesFinal = [names randomWithNumber:contentNumber];
-    for (int i = 1; i <= namesFinal.count; i++) {
+    NSString *stringUserIDsNames = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"namePerson" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
+    NSArray *userIDsNames = [stringUserIDsNames componentsSeparatedByString:@"、"];
+    NSArray *userIDNamesFinal = [userIDsNames randomWithNumber:contentNumber];
+    for (int i = 1; i <= userIDNamesFinal.count; i++) {
         Person *person = [[Person alloc] initWithRandomData];
-        person.name = namesFinal[(NSUInteger) (i - 1)];
-        person.userID = [NSString stringWithFormat:@"%d", i];
+        NSString *userIDName = userIDNamesFinal[(NSUInteger) (i - 1)];
+        NSArray *arrayUserIDName = [userIDName componentsSeparatedByString:@":"];
+        person.userID = arrayUserIDName.firstObject;
+        person.name = arrayUserIDName.lastObject;
         person.products = [Product reCreatRandomTableWithUserID:person.userID];
         [person executeInsertDataWithProperies];
         [arrayFinal addObject:person];
+
     }
+
+
+
+//    for (int i = 1; i <= userIDNamesFinal.count; i++) {
+//        Person *person = [[Person alloc] initWithRandomData];
+//        person.name = userIDNamesFinal[(NSUInteger) (i - 1)];
+//        person.userID = [NSString stringWithFormat:@"%d", i];
+//        person.products = [Product reCreatRandomTableWithUserID:person.userID];
+//        [person executeInsertDataWithProperies];
+//        [arrayFinal addObject:person];
+//    }
     return arrayFinal;
 }
 -(void)getRandomSex {

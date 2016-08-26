@@ -21,7 +21,6 @@
 		997B760130E310BFC0B0EFFF /* nameProduct.txt in Resources */ = {isa = PBXBuildFile; fileRef = 997B743BF23907C488F50A26 /* nameProduct.txt */; };
 		997B77EF08E77C484148723E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997B73E0D7152ACE6A1583A4 /* Assets.xcassets */; };
 		997B7882F97CF77729FEAF82 /* NSObject+dataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7C4592B7767F0A589E4E /* NSObject+dataBase.m */; };
-		997B79221C9081FCBFE403E2 /* defaultDataBase.db in Resources */ = {isa = PBXBuildFile; fileRef = 997B73982D435C498F7270F2 /* defaultDataBase.db */; };
 		997B7AC8244993490E060A78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B75F90C490EDFC048D00F /* AppDelegate.m */; };
 		997B7B55910B63F91812CB91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7E616D5BF98EAA8B3DF7 /* ViewController.m */; };
 		997B7B6A8D6EB5BFC8D44DD7 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B726D795BC3BCA36C8D17 /* Product.m */; };
@@ -41,7 +40,6 @@
 		4ACC5558A2095186800F70CD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		997B70E130F9B406810615D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		997B726D795BC3BCA36C8D17 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
-		997B73982D435C498F7270F2 /* defaultDataBase.db */ = {isa = PBXFileReference; lastKnownFileType = file.db; path = defaultDataBase.db; sourceTree = "<group>"; };
 		997B73E0D7152ACE6A1583A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		997B73F9960D680DD62A9F88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		997B74283C7CDABD5E4AA2C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 		997B7B00B36653F6CF5EF2DB /* dataSource */ = {
 			isa = PBXGroup;
 			children = (
-				997B73982D435C498F7270F2 /* defaultDataBase.db */,
 				997B7ADC6B61641C2C0D3083 /* namePerson.txt */,
 				997B743BF23907C488F50A26 /* nameProduct.txt */,
 			);
@@ -269,7 +266,6 @@
 				997B77EF08E77C484148723E /* Assets.xcassets in Resources */,
 				997B73C2B1A1E5DD043DA155 /* LaunchScreen.storyboard in Resources */,
 				997B74922F67119085A0C005 /* Main.storyboard in Resources */,
-				997B79221C9081FCBFE403E2 /* defaultDataBase.db in Resources */,
 				997B7F3C405461C456F35F5D /* namePerson.txt in Resources */,
 				997B760130E310BFC0B0EFFF /* nameProduct.txt in Resources */,
 			);

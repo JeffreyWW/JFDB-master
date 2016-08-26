@@ -2,27 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8abafae8-645b-4e37-89b3-3c9d4c8f6294" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JFDB-master/Category/NSArray+JF.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JFDB-master/Category/NSArray+JF.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JFDB-master/VIew/PersonCell.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JFDB-master/VIew/PersonCell.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataSource/nameProduct.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dataSource/name.txt" afterPath="$PROJECT_DIR$/dataSource/namePerson.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JFDB-master.xcworkspace/xcuserdata/jeffrey.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/JFDB-master.xcworkspace/xcuserdata/jeffrey.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dataSource/defaultDataBase.db" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/JFDB-master.iml" afterPath="$PROJECT_DIR$/.idea/JFDB-master.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JFDB-master.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/JFDB-master.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JFDB-master/AppDelegate.m" afterPath="$PROJECT_DIR$/JFDB-master/AppDelegate.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JFDB-master/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/JFDB-master/Base.lproj/Main.storyboard" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JFDB-master/Class/MainController.m" afterPath="$PROJECT_DIR$/JFDB-master/Class/MainController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JFDB-master/JFDB/JFTable.m" afterPath="$PROJECT_DIR$/JFDB-master/JFDB/JFTable.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JFDB-master/JFDB/NSObject+dataBase.h" afterPath="$PROJECT_DIR$/JFDB-master/JFDB/NSObject+dataBase.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JFDB-master/JFDB/NSObject+dataBase.m" afterPath="$PROJECT_DIR$/JFDB-master/JFDB/NSObject+dataBase.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JFDB-master/Models/Person.h" afterPath="$PROJECT_DIR$/JFDB-master/Models/Person.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JFDB-master/Models/Person.m" afterPath="$PROJECT_DIR$/JFDB-master/Models/Person.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JFDB-master/Models/Product.h" afterPath="$PROJECT_DIR$/JFDB-master/Models/Product.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JFDB-master/Models/Product.m" afterPath="$PROJECT_DIR$/JFDB-master/Models/Product.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JFDB-master/ViewController.m" afterPath="$PROJECT_DIR$/JFDB-master/ViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSource/namePerson.txt" afterPath="$PROJECT_DIR$/dataSource/namePerson.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSource/nameProduct.txt" afterPath="$PROJECT_DIR$/dataSource/nameProduct.txt" />
     </list>
     <ignored path="JFDB-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,6 +23,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -42,34 +33,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NSObject+dataBase.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JFDB-master/JFDB/NSObject+dataBase.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="37" column="3" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MainController.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JFDB-master/Class/MainController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+            <state relative-caret-position="195">
+              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
               <folding>
-                <element signature="e#134#160#0" expanded="true" />
+                <element signature="e#422#448#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NSArray+JF.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JFDB-master/Category/NSArray+JF.m">
+      <file leaf-file-name="AppDelegate.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JFDB-master/AppDelegate.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-              <folding />
+            <state relative-caret-position="221">
+              <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+              <folding>
+                <element signature="e#167#190#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,8 +70,8 @@
       <file leaf-file-name="Person.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JFDB-master/Models/Person.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+            <state relative-caret-position="259">
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="e#93#111#0" expanded="true" />
               </folding>
@@ -99,8 +82,8 @@
       <file leaf-file-name="Product.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JFDB-master/Models/Product.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
                 <element signature="e#93#112#0" expanded="true" />
               </folding>
@@ -112,17 +95,17 @@
         <entry file="file://$PROJECT_DIR$/dataSource/nameProduct.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
+              <caret line="0" column="66" selection-start-line="0" selection-start-column="66" selection-end-line="0" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Product.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JFDB-master/Models/Product.h">
+      <file leaf-file-name="namePerson.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dataSource/namePerson.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="80" selection-start-line="0" selection-start-column="80" selection-end-line="0" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -131,8 +114,8 @@
       <file leaf-file-name="Person.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JFDB-master/Models/Person.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+            <state relative-caret-position="195">
+              <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -141,11 +124,21 @@
       <file leaf-file-name="NSObject+dataBase.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JFDB-master/JFDB/NSObject+dataBase.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="271" column="49" selection-start-line="271" selection-start-column="49" selection-end-line="271" selection-end-column="49" />
+            <state relative-caret-position="120">
+              <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
               <folding>
                 <element signature="e#123#147#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JFDB-master/Models/Product.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -164,33 +157,33 @@
         <option value="$PROJECT_DIR$/JFDB-master/ViewController.m" />
         <option value="$PROJECT_DIR$/JFDB-master/HowToWorkController.m" />
         <option value="$PROJECT_DIR$/dataSource/name.txt" />
-        <option value="$PROJECT_DIR$/JFDB-master/AppDelegate.m" />
         <option value="$PROJECT_DIR$/JFDB-master/main.m" />
         <option value="$PROJECT_DIR$/JFDB-master/JFDB/NSObject+dataBase.h" />
         <option value="$PROJECT_DIR$/JFDB-master/JFDB/JFDB.h" />
         <option value="$PROJECT_DIR$/JFDB-master/JFDB/JFTable.m" />
         <option value="$PROJECT_DIR$/JFDB-master/VIew/PersonCell.h" />
-        <option value="$PROJECT_DIR$/dataSource/nameProduct.txt" />
         <option value="$PROJECT_DIR$/JFDB-master/Category/NSArray+JF.m" />
         <option value="$PROJECT_DIR$/JFDB-master/Models/self.m" />
         <option value="$PROJECT_DIR$/JFDB-master/Models/Person.h" />
         <option value="$PROJECT_DIR$/JFDB-master/Models/Product.h" />
-        <option value="$PROJECT_DIR$/JFDB-master/Models/Product.m" />
-        <option value="$PROJECT_DIR$/JFDB-master/Models/Person.m" />
         <option value="$PROJECT_DIR$/JFDB-master/JFDB/NSObject+dataBase.m" />
+        <option value="$PROJECT_DIR$/JFDB-master/AppDelegate.m" />
+        <option value="$PROJECT_DIR$/dataSource/namePerson.txt" />
+        <option value="$PROJECT_DIR$/dataSource/nameProduct.txt" />
+        <option value="$PROJECT_DIR$/JFDB-master/Models/Person.m" />
+        <option value="$PROJECT_DIR$/JFDB-master/Models/Product.m" />
         <option value="$PROJECT_DIR$/JFDB-master/Class/MainController.m" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="42" />
+    <option name="x" value="53" />
     <option name="y" value="23" />
     <option name="width" value="1403" />
     <option name="height" value="836" />
@@ -239,7 +232,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -300,16 +292,31 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Frameworks" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JFDB-master" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="dataSource" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/手贷" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="JFDB-master" />
@@ -387,7 +394,7 @@
     <option name="totallyTimeSpent" value="63970000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="42" y="23" width="1403" height="836" extended-state="0" />
+    <frame x="53" y="23" width="1403" height="836" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -395,14 +402,14 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19623657" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3158602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19247468" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30107528" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47580644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44489247" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -427,8 +434,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/JFDB-master/Class/MainController.m</url>
-          <line>40</line>
-          <option name="timeStamp" value="60" />
+          <line>59</line>
+          <option name="timeStamp" value="73" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -439,7 +446,7 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="61" />
+      <option name="time" value="74" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="AppleRunConfiguration">
@@ -451,16 +458,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/JFDB-master/Models/Tdata.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-          <folding>
-            <element signature="e#93#126#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JFDB-master/JFDB/NSObject+dataBase.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
@@ -475,7 +472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -531,9 +527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-          <folding>
-            <element signature="e#93#126#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -551,7 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -607,9 +599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-          <folding>
-            <element signature="e#93#126#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -639,7 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="271" column="52" selection-start-line="271" selection-start-column="25" selection-end-line="271" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -655,17 +643,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1049" column="24" selection-start-line="1049" selection-start-column="24" selection-end-line="1049" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataSource/name.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dataSource/name.txt" />
     <entry file="file://$PROJECT_DIR$/JFDB-master/ViewController.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -688,19 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding>
-            <element signature="e#513#532#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JFDB-master/AppDelegate.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#167#190#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -708,7 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -716,7 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="176" column="16" selection-start-line="176" selection-start-column="16" selection-end-line="176" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -724,7 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -732,7 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -740,7 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -748,14 +711,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="49" column="47" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JFDB-master/Category/NSArray+JF.h">
+    <entry file="file://$PROJECT_DIR$/JFDB-master/JFDB/NSObject+dataBase.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="570">
+          <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -768,10 +730,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/JFDB-master/Category/NSArray+JF.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/JFDB-master/Models/Person.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        <state relative-caret-position="195">
+          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataSource/namePerson.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="80" selection-start-line="0" selection-start-column="80" selection-end-line="0" selection-end-column="80" />
           <folding />
         </state>
       </provider>
@@ -779,63 +757,65 @@
     <entry file="file://$PROJECT_DIR$/dataSource/nameProduct.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JFDB-master/Models/Product.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JFDB-master/Models/Person.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-          <folding>
-            <element signature="e#93#111#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JFDB-master/Models/Product.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#93#112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JFDB-master/JFDB/NSObject+dataBase.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="37" column="3" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+          <caret line="0" column="66" selection-start-line="0" selection-start-column="66" selection-end-line="0" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JFDB-master/JFDB/NSObject+dataBase.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="271" column="49" selection-start-line="271" selection-start-column="49" selection-end-line="271" selection-end-column="49" />
+        <state relative-caret-position="120">
+          <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
             <element signature="e#123#147#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JFDB-master/Class/MainController.m">
+    <entry file="file://$PROJECT_DIR$/JFDB-master/Models/Product.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JFDB-master/Models/Product.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding>
-            <element signature="e#134#160#0" expanded="true" />
+            <element signature="e#93#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JFDB-master/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+          <folding>
+            <element signature="e#167#190#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JFDB-master/Models/Person.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="e#93#111#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JFDB-master/Class/MainController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="e#422#448#0" expanded="true" />
           </folding>
         </state>
       </provider>

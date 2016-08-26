@@ -21,7 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     /**从项目中把数据库存到沙盒*/
-    [self saveDBIntoDocument];
+//    [self saveDBIntoDocument];
     [Person configForTableName:@"personTable"];
     [Person configForPropertiesFields:@{
             @"userID": @"ID",
@@ -38,17 +38,17 @@
     return YES;
 }
 -(void)saveDBIntoDocument {
-    NSFileManager*fileManager =[NSFileManager defaultManager];
-    NSError*error;
-    NSArray*paths =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
-    NSString*documentsDirectory = paths[0];
-
-    NSString*txtPath =[documentsDirectory stringByAppendingPathComponent:@"defaultDataBase.db"];
-
-    if(![fileManager fileExistsAtPath:txtPath]){
-        NSString*resourcePath =[[NSBundle mainBundle] pathForResource:@"defaultDataBase" ofType:@"db"];
-        [fileManager copyItemAtPath:resourcePath toPath:txtPath error:&error];
-    }
+//    NSFileManager*fileManager =[NSFileManager defaultManager];
+//    NSError*error;
+//    NSArray*paths =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+//    NSString*documentsDirectory = paths[0];
+//
+//    NSString*txtPath =[documentsDirectory stringByAppendingPathComponent:@"defaultDataBase.db"];
+//
+//    if(![fileManager fileExistsAtPath:txtPath]){
+//        NSString*resourcePath =[[NSBundle mainBundle] pathForResource:@"defaultDataBase" ofType:@"db"];
+//        [fileManager copyItemAtPath:resourcePath toPath:txtPath error:&error];
+//    }
 }
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
