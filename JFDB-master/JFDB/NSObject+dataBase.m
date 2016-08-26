@@ -11,52 +11,60 @@
 #import "JFTable.h"
 #import "NSObject+dataBase.h"
 static const char *tableNameKey = "tableNameKey";
-static const char *fieldsKey = "fieldKey";
-static const char *fieldsSubClassKey = "fieldsSubClassKey";
+static const char *propertiesFieldsKey = "fieldKey";
+static const char *propertiesSubClassKey = "propertiesSubClassKey";
 
 
 @implementation NSObject (dataBase)
-#pragma mark --- 表名相关方法
+
+#pragma mark --- 外部调用的一些config方法,其实是调用set方法设置添加的属性值
 +(void)configForTableName:(NSString *)tableName {
     [self setTableName:tableName];
 }
-/**利用runtime设置一个全局tableName方法(一个类对应一张表)*/
+
+/**用字典设置数组属性名和对应的子类*/
++(void)configForPropertiesFields:(NSDictionary *)config {
+    [self setPropertiesFields:config];
+}
+
+/**用字典设置数组属性名和对应的子类*/
++(void)configForArraySubClass:(NSDictionary *)config {
+    [self setPropertiesSubClass:config];
+}
+
+#pragma mark --- 添加的set方法,设置一些静态属性
+/**设置一个全局tableName方法(一个类对应一张表)*/
 + (void)setTableName:(NSString *)tableName {
     objc_setAssociatedObject(self, tableNameKey, tableName, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
+
+/**用字典设置数组属性名和对应的子类*/
++(void)setPropertiesSubClass:(NSDictionary *)config {
+    objc_setAssociatedObject(self, propertiesSubClassKey, config, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+/**用字典设置属性和表中字段对应*/
++(void)setPropertiesFields:(NSDictionary *)config {
+    objc_setAssociatedObject(self, propertiesFieldsKey, config, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+#pragma mark --- 添加的get方法,类似获取到属性
 /**利用runtime获取表名(一个类对应一张表),如果之前没有设置过,则使用类名来当做表名*/
 + (NSString *)tableName {
     NSString *name = (NSString *) objc_getAssociatedObject(self, tableNameKey);
     NSString *tableName = name ? name : NSStringFromClass([self class]);
     return tableName;
 }
-/**设置字段对应*/
-+(void)configForFields:(NSDictionary *)config {
-    [self setFields:config];
-}
 
-/**设置数组属性和对应的类名*/
-//设置好了以后,添加数据的时候,在设置字段的时候,之前是没有设置这个字段的,现在赋值给单独是一个属性数组,存放数组属性的字段名.然后根据
-//设置好以后可以直接返回的字段,拿到对应的类,通过这个类直接去查符合这个模型主键的所有的数据并且赋值给这个模型的这个字段
-+(void)configForArraySubClass:(NSDictionary *)config {
-    [self setFieldsSubClass:config];
-}
-
-+(void)setFieldsSubClass:(NSDictionary *)config {
-    objc_setAssociatedObject(self, fieldsSubClassKey, config, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
+/**获取数组属性名对应的次级模型类名*/
 +(NSDictionary *)propertySubClass {
-    NSDictionary *fieldsSubClass = objc_getAssociatedObject(self, fieldsSubClassKey);
+    NSDictionary *fieldsSubClass = objc_getAssociatedObject(self, propertiesSubClassKey);
     return fieldsSubClass;
 }
 
-+(void)setFields:(NSDictionary *)config {
-    objc_setAssociatedObject(self, fieldsKey, config, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
 /**字典,键值对为属性:字段,如果之前没有设置过,则也返回字典,只是和表中的字段是一一对应的*/
 +(NSDictionary *)propertiesFields {
-    NSDictionary *propertiesFields = objc_getAssociatedObject(self, fieldsKey);
+    NSDictionary *propertiesFields = objc_getAssociatedObject(self, propertiesFieldsKey);
     unsigned int count;
     if (!propertiesFields) {
         NSMutableDictionary *m_propertiesFields = [NSMutableDictionary dictionary];
@@ -71,6 +79,7 @@ static const char *fieldsSubClassKey = "fieldsSubClassKey";
 
     return propertiesFields;
 }
+
 /**字典,键值对为字段:属性*/
 +(NSDictionary *)fieldsProperties {
     NSDictionary *propertiesFields = [self propertiesFields];
@@ -85,7 +94,7 @@ static const char *fieldsSubClassKey = "fieldsSubClassKey";
 }
 
 /**获取到所有属性名的数组,当作字段去和表对应,如果有设置,则按照设置过的字典的values对应**/
-+(NSArray *)getAllFields {
++(NSArray *)allFields {
     NSMutableArray *arrayProperties = [NSMutableArray array];
     unsigned int count;
     objc_property_t *propertyList = class_copyPropertyList([self class], &count);
@@ -174,7 +183,7 @@ static const char *fieldsSubClassKey = "fieldsSubClassKey";
 }
 /**获取到这个类类名的表*/
 +(JFTable *)createTableWithClassName {
-    NSArray *fields = [self getAllFields];
+    NSArray *fields = [self allFields];
     NSString *tableName = [self tableName];
     JFTable *table = [JFTable tableWithName:tableName fields:fields];
     return table;
@@ -199,29 +208,18 @@ static const char *fieldsSubClassKey = "fieldsSubClassKey";
     NSDictionary *dataSource = [self getFieldsValues];
     [table executeInsertDataWithDataSource:dataSource];
     NSDictionary *primaryKeyValue = [self getPrimaryKeyValue];//主键,主要用来查找次级数据数组
-    NSString *primary = primaryKeyValue.allKeys.firstObject;//主键
-    NSString *primartValue = primaryKeyValue.allValues.firstObject;//主键的值,用来去子表中查数组
-
     NSDictionary *propertySubClass = [[self class] propertySubClass];//字典,存的是属性名和关联的类名的键值对
     if (propertySubClass.allKeys.count > 0 && primaryKeyValue) {
         for (int i = 0; i < propertySubClass.allKeys.count; i++) {
             NSString *property = propertySubClass.allKeys[(NSUInteger) i];//每一个数组属性的属性名
-            NSString *className = propertySubClass.allValues[(NSUInteger) i];//每一个数组属性对应的类名
             NSArray *subModels = [self valueForKey:property];
             if (subModels.count > 0) {
                 for (id subModel in subModels) {
                     [subModel executeInsertDataWithProperies];
                 }
-
             }
         }
-
-
-
-
     }
-
-
 }
 /**把这个实例从数据库中删除,重复的也会删除!*/
 -(void)executeDeleteDataWithProperties {
@@ -249,7 +247,7 @@ static const char *fieldsSubClassKey = "fieldsSubClassKey";
     JFTable *table = [[self class] createTableWithClassName];
     NSDictionary *queryParam = [self getFieldsValues];
     NSArray *arrayDataSoruce = [table executQeueryDataWithQueryParam:queryParam];
-    NSArray *fields = [[self class] getAllFields];
+    NSArray *fields = [[self class] allFields];
     /**里面是每一条数据*/
     NSMutableArray *arrayModels = [NSMutableArray array];
     for (NSDictionary *datasource in arrayDataSoruce) {
@@ -271,7 +269,7 @@ static const char *fieldsSubClassKey = "fieldsSubClassKey";
             Class subClass = NSClassFromString(strSubClass);//数组里面模型的类
             id subModel = [[subClass alloc] init];//声明一个次级模型,当做查询条件
             NSString *primaryKey = [[self class] primaryKey];//拿到当前模型(父级)主键
-            NSString *valueForPrimaryKey = [self valueForKey:primaryKey];//拿到主键的值
+            NSString *valueForPrimaryKey = [model valueForKey:primaryKey];//拿到主键的值
             [subModel setValue:valueForPrimaryKey forKey:primaryKey];//之前定义好的,次级模型有一个属性,为上一级的主键
             NSArray *arraySubModels = [subModel executQeueryWithProperties];//次级模型去查它的表,按照字段为父级模型主键且值相同的去查,表示,属于这个上级模型的所有次级模型
             [model setValue:arraySubModels forKey:property];//把这个模型数组给数组属性赋值

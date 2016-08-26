@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0023A84F1D6D7EA6005FC9CB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0023A84E1D6D7EA6005FC9CB /* libsqlite3.tbd */; };
 		0023A8521D6DCE04005FC9CB /* HowToWorkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0023A8511D6DCE04005FC9CB /* HowToWorkController.m */; };
+		004F68351D6FEBB900337751 /* PersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 004F68341D6FEBB900337751 /* PersonCell.m */; };
 		00E30D701D6E8C1D00EF83BA /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E30D6F1D6E8C1D00EF83BA /* MainController.m */; };
 		997B710ABF41B19DD2F48F0B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 997B74283C7CDABD5E4AA2C5 /* Info.plist */; };
 		997B71C8F4F5FE77762881EB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7BBF0676BD2F36B899AE /* Person.m */; };
@@ -16,14 +17,16 @@
 		997B73C2B1A1E5DD043DA155 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997B753D6328A31D56B51D73 /* LaunchScreen.storyboard */; };
 		997B73DB74575D2C69EF6981 /* Tdata.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7F636846C6C7F51D83D6 /* Tdata.m */; };
 		997B74922F67119085A0C005 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997B7BF48F8B3C82D81DC8A7 /* Main.storyboard */; };
+		997B752FDC3D2F0E15FA6614 /* NSArray+JF.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7D7BA76A9BF1698387CE /* NSArray+JF.m */; };
+		997B760130E310BFC0B0EFFF /* nameProduct.txt in Resources */ = {isa = PBXBuildFile; fileRef = 997B743BF23907C488F50A26 /* nameProduct.txt */; };
 		997B77EF08E77C484148723E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997B73E0D7152ACE6A1583A4 /* Assets.xcassets */; };
-		997B787EA5F8B01B95BE5DC5 /* name.txt in Resources */ = {isa = PBXBuildFile; fileRef = 997B7E1B7DC6E8A2282B0313 /* name.txt */; };
 		997B7882F97CF77729FEAF82 /* NSObject+dataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7C4592B7767F0A589E4E /* NSObject+dataBase.m */; };
 		997B79221C9081FCBFE403E2 /* defaultDataBase.db in Resources */ = {isa = PBXBuildFile; fileRef = 997B73982D435C498F7270F2 /* defaultDataBase.db */; };
 		997B7AC8244993490E060A78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B75F90C490EDFC048D00F /* AppDelegate.m */; };
 		997B7B55910B63F91812CB91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7E616D5BF98EAA8B3DF7 /* ViewController.m */; };
 		997B7B6A8D6EB5BFC8D44DD7 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B726D795BC3BCA36C8D17 /* Product.m */; };
 		997B7D2AA62896AEE5266A1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B773EC1E2107D7E49F6B9 /* main.m */; };
+		997B7F3C405461C456F35F5D /* namePerson.txt in Resources */ = {isa = PBXBuildFile; fileRef = 997B7ADC6B61641C2C0D3083 /* namePerson.txt */; };
 		F25E4ABDC771671FC89A19C5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C764BFF7A0B1BA2F71E90B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +34,8 @@
 		0023A84E1D6D7EA6005FC9CB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		0023A8501D6DCE04005FC9CB /* HowToWorkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToWorkController.h; sourceTree = "<group>"; };
 		0023A8511D6DCE04005FC9CB /* HowToWorkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowToWorkController.m; sourceTree = "<group>"; };
+		004F68331D6FEBB900337751 /* PersonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCell.h; sourceTree = "<group>"; };
+		004F68341D6FEBB900337751 /* PersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCell.m; sourceTree = "<group>"; };
 		00E30D6E1D6E8C1D00EF83BA /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		00E30D6F1D6E8C1D00EF83BA /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		4ACC5558A2095186800F70CD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -40,17 +45,20 @@
 		997B73E0D7152ACE6A1583A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		997B73F9960D680DD62A9F88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		997B74283C7CDABD5E4AA2C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		997B743BF23907C488F50A26 /* nameProduct.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nameProduct.txt; sourceTree = "<group>"; };
 		997B75F90C490EDFC048D00F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		997B762BAFF73979F55781E1 /* JFDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFDB.h; sourceTree = "<group>"; };
 		997B7735F16C169B2DF69F00 /* JFDB-master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JFDB-master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		997B773EC1E2107D7E49F6B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		997B7A34BAE0B60C9F81A21A /* Tdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tdata.h; sourceTree = "<group>"; };
 		997B7A5ACE56591DE43DBD63 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		997B7ADC6B61641C2C0D3083 /* namePerson.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = namePerson.txt; sourceTree = "<group>"; };
 		997B7AEB23E6061EBCAD5149 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		997B7BBF0676BD2F36B899AE /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		997B7C4592B7767F0A589E4E /* NSObject+dataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+dataBase.m"; sourceTree = "<group>"; };
+		997B7CB16EB1DC959045B9E9 /* NSArray+JF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JF.h"; sourceTree = "<group>"; };
+		997B7D7BA76A9BF1698387CE /* NSArray+JF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JF.m"; sourceTree = "<group>"; };
 		997B7DD00FE5F0F07409CD3B /* JFTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFTable.h; sourceTree = "<group>"; };
-		997B7E1B7DC6E8A2282B0313 /* name.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = name.txt; sourceTree = "<group>"; };
 		997B7E4AA124E0FA2D0EC1C4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		997B7E616D5BF98EAA8B3DF7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		997B7E747469C44BB3B8C86C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,6 +126,8 @@
 				997B7BBF8AEE847EFB83D17F /* JFDB */,
 				997B7681963FC7571C213909 /* Models */,
 				997B736020C37E3639866758 /* Class */,
+				997B7778D1EFC43F34374A42 /* VIew */,
+				997B7D6FC068F9C5FF21EB1B /* Category */,
 			);
 			path = "JFDB-master";
 			sourceTree = "<group>";
@@ -135,6 +145,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		997B7778D1EFC43F34374A42 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				004F68331D6FEBB900337751 /* PersonCell.h */,
+				004F68341D6FEBB900337751 /* PersonCell.m */,
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
 		997B78C0A619A145FC1456BE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				997B73982D435C498F7270F2 /* defaultDataBase.db */,
-				997B7E1B7DC6E8A2282B0313 /* name.txt */,
+				997B7ADC6B61641C2C0D3083 /* namePerson.txt */,
+				997B743BF23907C488F50A26 /* nameProduct.txt */,
 			);
 			path = dataSource;
 			sourceTree = "<group>";
@@ -181,6 +201,15 @@
 				1FF77BAC4B6184868F639B48 /* Frameworks */,
 				997B7B00B36653F6CF5EF2DB /* dataSource */,
 			);
+			sourceTree = "<group>";
+		};
+		997B7D6FC068F9C5FF21EB1B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				997B7D7BA76A9BF1698387CE /* NSArray+JF.m */,
+				997B7CB16EB1DC959045B9E9 /* NSArray+JF.h */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +270,8 @@
 				997B73C2B1A1E5DD043DA155 /* LaunchScreen.storyboard in Resources */,
 				997B74922F67119085A0C005 /* Main.storyboard in Resources */,
 				997B79221C9081FCBFE403E2 /* defaultDataBase.db in Resources */,
-				997B787EA5F8B01B95BE5DC5 /* name.txt in Resources */,
+				997B7F3C405461C456F35F5D /* namePerson.txt in Resources */,
+				997B760130E310BFC0B0EFFF /* nameProduct.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,12 +334,14 @@
 				00E30D701D6E8C1D00EF83BA /* MainController.m in Sources */,
 				997B7AC8244993490E060A78 /* AppDelegate.m in Sources */,
 				997B7B55910B63F91812CB91 /* ViewController.m in Sources */,
+				004F68351D6FEBB900337751 /* PersonCell.m in Sources */,
 				997B722B2D31D4FADF10E609 /* JFTable.m in Sources */,
 				0023A8521D6DCE04005FC9CB /* HowToWorkController.m in Sources */,
 				997B7882F97CF77729FEAF82 /* NSObject+dataBase.m in Sources */,
 				997B73DB74575D2C69EF6981 /* Tdata.m in Sources */,
 				997B71C8F4F5FE77762881EB /* Person.m in Sources */,
 				997B7B6A8D6EB5BFC8D44DD7 /* Product.m in Sources */,
+				997B752FDC3D2F0E15FA6614 /* NSArray+JF.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

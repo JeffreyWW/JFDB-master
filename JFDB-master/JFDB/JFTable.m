@@ -191,7 +191,7 @@
         NSLog(@"数据库打开失败");
         resultDataSoures = nil;
     }
-    NSLog(@"查询结束,返回数据是%@,总个数是%d", resultDataSoures, resultDataSoures.count);
+    NSLog(@"表%@查询结束,返回数据是%@,总个数是%d", self.name,resultDataSoures, resultDataSoures.count);
     return resultDataSoures;
 }
 

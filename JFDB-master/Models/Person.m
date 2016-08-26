@@ -4,7 +4,8 @@
 //
 
 #import "Person.h"
-
+#import "NSArray+JF.h"
+#import "Product.h"
 
 @implementation Person {
 
@@ -18,20 +19,25 @@
         [self getRandomSex];
     }
     return self;
-
 }
 
-+(void)reCreatTableWithRandomData {
+/**生成Person类的随机数据,姓名根据本地的txt文件来生成,个数自定义*/
++ (NSArray *)reCreatRandomTableWithContentNumber:(NSUInteger)contentNumber {
     [Person dropTable];
-    NSString *name = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"name" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
+    [Product dropTable];
+    NSMutableArray *arrayFinal = [NSMutableArray array];
+    NSString *name = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"namePerson" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
     NSArray *names = [name componentsSeparatedByString:@"、"];
-    for (int i = 1; i <= names.count; i++) {
+    NSArray *namesFinal = [names randomWithNumber:contentNumber];
+    for (int i = 1; i <= namesFinal.count; i++) {
         Person *person = [[Person alloc] initWithRandomData];
-        person.name = names[(NSUInteger) (i - 1)];
+        person.name = namesFinal[(NSUInteger) (i - 1)];
         person.userID = [NSString stringWithFormat:@"%d", i];
+        person.products = [Product reCreatRandomTableWithUserID:person.userID];
         [person executeInsertDataWithProperies];
+        [arrayFinal addObject:person];
     }
-
+    return arrayFinal;
 }
 -(void)getRandomSex {
     NSInteger sex = [self getRandomNumber:0 to:1];
@@ -53,6 +59,11 @@
     NSInteger weight = [self getRandomNumber:55 to:80];
     NSString *stringWeight = [NSString stringWithFormat:@"%dKG", weight];
     self.weight = stringWeight;
+}
+
+-(void)getRandomProducts {
+    NSArray *products = [Product reCreatRandomTableWithUserID:self.userID];
+    self.products = products;
 }
 
 -(NSInteger)getRandomNumber:(NSInteger)from to:(NSInteger)to {

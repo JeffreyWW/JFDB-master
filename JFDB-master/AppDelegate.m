@@ -23,7 +23,7 @@
     /**从项目中把数据库存到沙盒*/
     [self saveDBIntoDocument];
     [Person configForTableName:@"personTable"];
-    [Person configForFields:@{
+    [Person configForPropertiesFields:@{
             @"userID": @"ID",
             @"height": @"HEIGHT",
             @"weight": @"WEIGHT",

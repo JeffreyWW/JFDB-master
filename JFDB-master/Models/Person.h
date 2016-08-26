@@ -14,5 +14,6 @@
 @property(nonatomic, copy) NSString *age;
 @property(nonatomic, copy) NSString *sex;
 @property(nonatomic, strong) NSArray *products;
-+ (void)reCreatTableWithRandomData;
+
++ (NSArray *)reCreatRandomTableWithContentNumber:(NSUInteger)contentNumber;
 @end

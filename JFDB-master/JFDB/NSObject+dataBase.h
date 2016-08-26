@@ -18,7 +18,7 @@
  * 设置类的属性和表的字段关联,如果不设置,将按照类属性名和表字段一一对应
  * @param config 传入的设置,伪代码: @{ 属性名1 : 表对应字段名字1, 属性名2 : 表对应字段名字2 }
  */
-+ (void)configForFields:(NSDictionary *)config;
++ (void)configForPropertiesFields:(NSDictionary *)config;
 
 
 + (void)configForArraySubClass:(NSDictionary *)config;
