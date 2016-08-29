@@ -20,9 +20,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    /**从项目中把数据库存到沙盒*/
-//    [self saveDBIntoDocument];
+    /**设置表名*/
     [Person configForTableName:@"personTable"];
+    /**设置字段对应,如果不设置,按照属性名*/
     [Person configForPropertiesFields:@{
             @"userID": @"ID",
             @"height": @"HEIGHT",
@@ -31,6 +31,7 @@
             @"sex": @"SEX",
             @"name": @"NAME"
     }];
+    /**设置数组属性和类名对应*/
     [Person configForArraySubClass:@{
             @"products" : @"Product"
     }];

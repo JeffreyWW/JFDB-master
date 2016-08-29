@@ -54,7 +54,7 @@
     [self.tableView reloadData];
 }
 
-/**点击重置并随机生成指定条数数据,现在为10条*/
+/**点击重置并随机生成指定条数数据,现在为5条*/
 - (IBAction)clickBtRestData:(UIButton *)sender {
     [Person reCreatRandomTableWithContentNumber:5];
     Person *person = [[Person alloc] init];
