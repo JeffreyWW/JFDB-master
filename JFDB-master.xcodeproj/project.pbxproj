@@ -10,6 +10,8 @@
 		0023A84F1D6D7EA6005FC9CB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0023A84E1D6D7EA6005FC9CB /* libsqlite3.tbd */; };
 		0023A8521D6DCE04005FC9CB /* HowToWorkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0023A8511D6DCE04005FC9CB /* HowToWorkController.m */; };
 		004F68351D6FEBB900337751 /* PersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 004F68341D6FEBB900337751 /* PersonCell.m */; };
+		00AC8C241D74149000A3B8FB /* FoodController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8C231D74149000A3B8FB /* FoodController.m */; };
+		00AC8C271D7417A600A3B8FB /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8C261D7417A600A3B8FB /* ProductCell.m */; };
 		00E30D701D6E8C1D00EF83BA /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E30D6F1D6E8C1D00EF83BA /* MainController.m */; };
 		997B710ABF41B19DD2F48F0B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 997B74283C7CDABD5E4AA2C5 /* Info.plist */; };
 		997B71C8F4F5FE77762881EB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7BBF0676BD2F36B899AE /* Person.m */; };
@@ -35,6 +37,10 @@
 		0023A8511D6DCE04005FC9CB /* HowToWorkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowToWorkController.m; sourceTree = "<group>"; };
 		004F68331D6FEBB900337751 /* PersonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCell.h; sourceTree = "<group>"; };
 		004F68341D6FEBB900337751 /* PersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCell.m; sourceTree = "<group>"; };
+		00AC8C221D74149000A3B8FB /* FoodController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodController.h; sourceTree = "<group>"; };
+		00AC8C231D74149000A3B8FB /* FoodController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodController.m; sourceTree = "<group>"; };
+		00AC8C251D7417A600A3B8FB /* ProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCell.h; sourceTree = "<group>"; };
+		00AC8C261D7417A600A3B8FB /* ProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCell.m; sourceTree = "<group>"; };
 		00E30D6E1D6E8C1D00EF83BA /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		00E30D6F1D6E8C1D00EF83BA /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		4ACC5558A2095186800F70CD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +109,8 @@
 			children = (
 				00E30D6E1D6E8C1D00EF83BA /* MainController.h */,
 				00E30D6F1D6E8C1D00EF83BA /* MainController.m */,
+				00AC8C221D74149000A3B8FB /* FoodController.h */,
+				00AC8C231D74149000A3B8FB /* FoodController.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -148,6 +156,8 @@
 			children = (
 				004F68331D6FEBB900337751 /* PersonCell.h */,
 				004F68341D6FEBB900337751 /* PersonCell.m */,
+				00AC8C251D7417A600A3B8FB /* ProductCell.h */,
+				00AC8C261D7417A600A3B8FB /* ProductCell.m */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
@@ -328,8 +338,10 @@
 			files = (
 				997B7D2AA62896AEE5266A1B /* main.m in Sources */,
 				00E30D701D6E8C1D00EF83BA /* MainController.m in Sources */,
+				00AC8C241D74149000A3B8FB /* FoodController.m in Sources */,
 				997B7AC8244993490E060A78 /* AppDelegate.m in Sources */,
 				997B7B55910B63F91812CB91 /* ViewController.m in Sources */,
+				00AC8C271D7417A600A3B8FB /* ProductCell.m in Sources */,
 				004F68351D6FEBB900337751 /* PersonCell.m in Sources */,
 				997B722B2D31D4FADF10E609 /* JFTable.m in Sources */,
 				0023A8521D6DCE04005FC9CB /* HowToWorkController.m in Sources */,

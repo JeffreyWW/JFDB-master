@@ -16,4 +16,5 @@
 @property(nonatomic,weak)IBOutlet UILabel *lbAge;
 @property(nonatomic,weak)IBOutlet UILabel *lbSex;
 @property(nonatomic,weak)IBOutlet UIButton *btProduct;
+@property(nonatomic, copy) void (^showFood)();
 @end

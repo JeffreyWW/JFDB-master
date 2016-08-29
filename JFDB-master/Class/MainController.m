@@ -21,6 +21,7 @@
 #import "Person.h"
 #import "Product.h"
 #import "PersonCell.h"
+#import "FoodController.h"
 
 @interface MainController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,weak) IBOutlet UITableView *tableView;
@@ -33,13 +34,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self baseConfig];
+    /**从沙盒数据库读取数据并显示*/
     [self showAllPersonData];
 
     // Do any additional setup after loading the view.
 }
 
 -(void)baseConfig {
-    self.title = @"数据库数据展示";
+    self.title = @"厨师数据显示";
 }
 /**显示所有Person数据*/
 -(void)showAllPersonData {
@@ -86,7 +88,19 @@
     cell.lbAge.text = person.age;
     cell.lbSex.text = person.sex;
     cell.lbName.text = person.name;
+    cell.showFood = ^{
+        [self performSegueWithIdentifier:@"food" sender:person];
+    };
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"food"]) {
+        FoodController *foodController = segue.destinationViewController;
+        foodController.person = sender;
+    }
+
+
 }
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     NSString *stringCount = [NSString stringWithFormat:@"总计%d条数据", self.arrayPerson.count];

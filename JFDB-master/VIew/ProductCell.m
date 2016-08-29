@@ -1,14 +1,14 @@
 //
-//  PersonCell.m
+//  ProductCell.m
 //  JFDB-master
 //
-//  Created by Jeffrey on 16/8/26.
+//  Created by Jeffrey on 16/8/29.
 //  Copyright © 2016年 Jeffrey. All rights reserved.
 //
 
-#import "PersonCell.h"
+#import "ProductCell.h"
 
-@implementation PersonCell
+@implementation ProductCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -20,7 +20,5 @@
 
     // Configure the view for the selected state
 }
-- (IBAction)clickShowFood:(UIButton *)sender {
-    self.showFood();
-}
+
 @end

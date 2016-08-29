@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "997B7107AEEDC1E68015DC20"
-               BuildableName = "JFDB-master.app"
+               BuildableName = "JFDB-master"
                BlueprintName = "JFDB-master"
                ReferencedContainer = "container:JFDB-master.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "997B7107AEEDC1E68015DC20"
-            BuildableName = "JFDB-master.app"
+            BuildableName = "JFDB-master"
             BlueprintName = "JFDB-master"
             ReferencedContainer = "container:JFDB-master.xcodeproj">
          </BuildableReference>
